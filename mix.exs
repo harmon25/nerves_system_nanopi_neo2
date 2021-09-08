@@ -35,7 +35,7 @@ defmodule NervesSystemNanoPiNeo2.MixProject do
     [
       type: :system,
       artifact_sites: [
-        {:github_releases, "uptimedk/#{@app}"}
+        # {:github_releases, "uptimedk/#{@app}"}
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
@@ -48,10 +48,10 @@ defmodule NervesSystemNanoPiNeo2.MixProject do
 
   defp deps do
     [
-      {:nerves, "~> 1.5.0", runtime: false},
-      {:nerves_system_br, "1.9.2", runtime: false},
-      {:nerves_toolchain_aarch64_unknown_linux_gnu, "1.2.0", runtime: false},
-      {:nerves_system_linter, "~> 0.3.0", runtime: false},
+      {:nerves, "~> 1.7.0", runtime: false},
+      {:nerves_system_br, "1.16.5", runtime: false},
+      {:nerves_toolchain_aarch64_nerves_linux_gnu, "~> 1.4", runtime: false},
+      {:nerves_system_linter, "~> 0.4.0", runtime: false},
       {:ex_doc, "~> 0.18", only: [:dev, :test], runtime: false}
     ]
   end
